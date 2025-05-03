@@ -1,19 +1,19 @@
 import React from 'react'
-import ToDoCard from './ToDoCard'
+import TodoCard from './TodoCard'
 
-export default function ToDoList(props) {
-    const {todos}=props;
+export default function TodoList(props) {
+    const { todos } = props
 
- return (
-    <ul className='main'>
-        {todos.map((todo,todoIndex)=>{
-            return (
-                <ToDoCard {...props} key='todoIndex'
-                index={todoIndex}>
-                    <p>{todo}</p>
-                </ToDoCard>
-            )
-        })}
-    </ul>
- )
+
+    return (
+        <ul className='main'>
+            {todos.map((todo, todoIndex) => {
+                return (
+                    <TodoCard {...props} key={todoIndex} index={todoIndex}>
+                        <p>{todo}</p>
+                    </TodoCard>
+                )
+            })}
+        </ul>
+    )
 }
